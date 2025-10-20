@@ -19,7 +19,7 @@ code {
 
 /** NAVBAR STYLING*/
 nav {
-    background-color: #ff6600;
+    background-color: #ae21bd;
     color: white;
     padding: 16px 24px;
     display: flex;
@@ -43,7 +43,7 @@ nav {
 }
 
 .logo-link:hover {
-    color: #ffcc80;
+    color: #4d7b82;
 }
 
 .desktop-nav {
