@@ -1,6 +1,8 @@
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
+import RegisterPage from "./components/auth/RegisterPage";
+
 
 
 function App() {
@@ -9,7 +11,8 @@ function App() {
     <Navbar/>
     <div className="content">
       <Routes>
-        
+                <Route path="/register" element={<RegisterPage  />} />
+
       </Routes>
 
     </div>
