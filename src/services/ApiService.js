@@ -297,7 +297,10 @@ export default class ApiService {
     }
 
     static async getAllMenus() {
+        console.log("getallmenus hit inservice before");
+
         const resp = await axios.get(`${this.BASE_URL}/menu`, {});
+        console.log("getallmenus hit inservice ", resp);
         return resp.data;
     }
 

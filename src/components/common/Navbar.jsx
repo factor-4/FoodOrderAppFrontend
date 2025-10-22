@@ -23,7 +23,7 @@ const Navbar = () => {
         <nav>
             <div className="logo">
                 <Link to="/" className="logo-link">
-                    FoodOrder App</Link>
+                    Food App</Link>
             </div>
 
             <div className="desktop-nav">
