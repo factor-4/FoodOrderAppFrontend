@@ -13,6 +13,7 @@ import OrderHistoryPage from "./components/profile_cart/OrderHistoryPage";
 import { AdminRoute, CustomerRoute } from "./services/Guard";
 import LeaveReviewPage from "./components/profile_cart/LeaveReviewPage";
 import CartPage from "./components/profile_cart/CartPage";
+import ProcessPaymentPage from "./components/payment/ProcessPaymentPage";
 
 
 
@@ -40,6 +41,7 @@ function App() {
 
               <Route path="/cart" element={<CustomerRoute element={<CartPage />} />} />
 
+           <Route path="/pay" element={<CustomerRoute element={<ProcessPaymentPage />} />} />
 
 
               <Route path="*" element={<Navigate to={"/home"} />} />
