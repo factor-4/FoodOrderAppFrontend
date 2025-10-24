@@ -12,6 +12,7 @@ import UpdateProfilePage from "./components/profile_cart/UpdateProfilePage";
 import OrderHistoryPage from "./components/profile_cart/OrderHistoryPage";
 import { AdminRoute, CustomerRoute } from "./services/Guard";
 import LeaveReviewPage from "./components/profile_cart/LeaveReviewPage";
+import CartPage from "./components/profile_cart/CartPage";
 
 
 
@@ -36,6 +37,8 @@ function App() {
               <Route path="/my-order-history" element={<CustomerRoute element={<OrderHistoryPage />} />} />
 
               <Route path="/leave-review" element={<CustomerRoute element={<LeaveReviewPage />} />} />
+
+              <Route path="/cart" element={<CustomerRoute element={<CartPage />} />} />
 
 
 
