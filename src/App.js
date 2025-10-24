@@ -14,6 +14,15 @@ import { AdminRoute, CustomerRoute } from "./services/Guard";
 import LeaveReviewPage from "./components/profile_cart/LeaveReviewPage";
 import CartPage from "./components/profile_cart/CartPage";
 import ProcessPaymentPage from "./components/payment/ProcessPaymentPage";
+import AdminLayout from "./components/admin/navbar/AdminLayout";
+import AdminCategoriesPage from "./components/admin/AdminCategoriesPage";
+import AdminCategoryFormPage from "./components/admin/AdminCategoryFormPage";
+import AdminMenuPage from "./components/admin/AdminMenuPage";
+import AdminMenuFormPage from "./components/admin/AdminMenuFormPage";
+import AdminOrdersPage from "./components/admin/AdminOrdersPage";
+import AdminOrderDetailPage from "./components/admin/AdminOrderDetailPage";
+import AdminPaymentsPage from "./components/admin/AdminPaymentsPage";
+import AdminPaymentDetailPage from "./components/admin/AdminPaymentDetailsPage";
 
 
 
@@ -44,7 +53,39 @@ function App() {
            <Route path="/pay" element={<CustomerRoute element={<ProcessPaymentPage />} />} />
 
 
-              <Route path="*" element={<Navigate to={"/home"} />} />
+            {/* ADMIN ROUTES */}
+
+          <Route path="/admin" element={<AdminRoute element={<AdminLayout />} />}>
+
+            <Route path="categories" element={<AdminCategoriesPage />} />
+            <Route path="categories/new" element={<AdminCategoryFormPage />} />
+            <Route path="categories/edit/:id" element={<AdminCategoryFormPage />} />
+
+
+            <Route path="menu-items" element={<AdminMenuPage />} />
+            <Route path="menu-items/new" element={<AdminMenuFormPage />} />
+            <Route path="menu-items/edit/:id" element={<AdminMenuFormPage />} />
+
+
+            <Route path="orders" element={<AdminOrdersPage />} />
+            <Route path="orders/:id" element={<AdminOrderDetailPage />} />
+
+
+            <Route path="payments" element={<AdminPaymentsPage />} />
+
+            <Route path="payments/:id" element={<AdminPaymentDetailPage />} />
+
+
+
+            
+
+
+
+
+          </Route>
+
+
+            <Route path="*" element={<Navigate to={"/home"} />} />
 
 
 
