@@ -26,36 +26,40 @@ import AdminPaymentDetailPage from "./components/admin/AdminPaymentDetailsPage";
 import AdminDashboardPage from "./components/admin/AdminDashboardPage";
 import AdminUserRegistration from "./components/auth/AdminUserRegistration";
 
-
-
-
 function App() {
   return (
     <BrowserRouter>
-    <Navbar/>
-    <div className="content">
-      <Routes>
-              <Route path="/register" element={<RegisterPage  />} />
-              <Route path="/login" element={<LoginPage  />} />
-              <Route path="/home" element={<HomePage  />} />
-              <Route path="/categories" element={<CategoriesPage  />} />
-              <Route path="/menu" element={<MenuPage />} />
-              <Route path="/menu/:id" element={<MenuDetailsPage />} />
+      <Navbar />
+      <div className="content">
 
-              <Route path="/profile" element={<CustomerRoute element={<ProfilePage />} />} />
+        <Routes>
 
-              <Route path="/update" element={<CustomerRoute element={<UpdateProfilePage />} />} />
+          {/* AUTH PAGES */}
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
 
-              <Route path="/my-order-history" element={<CustomerRoute element={<OrderHistoryPage />} />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/categories" element={<CategoriesPage />} />
 
-              <Route path="/leave-review" element={<CustomerRoute element={<LeaveReviewPage />} />} />
-
-              <Route path="/cart" element={<CustomerRoute element={<CartPage />} />} />
-
-           <Route path="/pay" element={<CustomerRoute element={<ProcessPaymentPage />} />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/menu/:id" element={<MenuDetailsPage />} />
 
 
-            {/* ADMIN ROUTES */}
+          <Route path="/profile" element={<CustomerRoute element={<ProfilePage />} />} />
+
+          <Route path="/update" element={<CustomerRoute element={<UpdateProfilePage />} />} />
+
+          <Route path="/my-order-history" element={<CustomerRoute element={<OrderHistoryPage />} />} />
+
+          <Route path="/leave-review" element={<CustomerRoute element={<LeaveReviewPage />} />} />
+
+          <Route path="/cart" element={<CustomerRoute element={<CartPage />} />} />
+
+
+          <Route path="/pay" element={<CustomerRoute element={<ProcessPaymentPage />} />} />
+
+
+          {/* ADMIN ROUTES */}
 
           <Route path="/admin" element={<AdminRoute element={<AdminLayout />} />}>
 
@@ -78,12 +82,11 @@ function App() {
             <Route path="payments/:id" element={<AdminPaymentDetailPage />} />
 
 
+
             <Route index element={<AdminDashboardPage />} />
 
+
             <Route path="register" element={<AdminUserRegistration />} />
-
-
-            
 
 
 
@@ -91,17 +94,18 @@ function App() {
           </Route>
 
 
-            <Route path="*" element={<Navigate to={"/home"} />} />
 
 
 
 
-      </Routes>
+          <Route path="*" element={<Navigate to={"/home"} />} />
 
-    </div>
-    <Footer/>
+
+        </Routes>
+
+      </div>
+      <Footer />
     </BrowserRouter>
-    
   );
 }
 
