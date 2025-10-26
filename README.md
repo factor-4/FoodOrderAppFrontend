@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+Food Ordering  APP Frontend 
+
+# Project Overview
+
+This project is the frontend of a modern food ordering and delivery application built with React. It provides an intuitive and responsive user interface that allows customers to browse restaurant menus, add items to their cart, and place orders seamlessly.
+
+The application is designed to work with a Spring Boot backend and includes features such as user authentication, real-time order updates, and secure payment integration (via Stripe).
+
+It demonstrates key frontend development skills, including component-based architecture, state management, API integration, and responsive design — following best practices for performance and scalability.
+
+
+# Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+.
+Follow the steps below to set up and run it locally.
 
-## Available Scripts
+npm start
 
-In the project directory, you can run:
+Runs the app in development mode.
+Open http://localhost:3000
+ in your browser to view it.
 
-### `npm start`
+The app automatically reloads when you make changes, and linting errors appear in the console.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm test
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Launches the test runner in interactive watch mode to help ensure everything works correctly.
 
-### `npm test`
+npm run build
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Builds the app for production in the build/ folder.
+The code is optimized and minified for best performance — ready for deployment.
 
-### `npm run build`
+npm run eject
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Note: Ejecting is a one-way operation. Once you eject, you can’t go back!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Use this command only if you need full control over the configuration (e.g., webpack, Babel, ESLint). For most use cases, the default setup is sufficient.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Features
 
-### `npm run eject`
+- Modern UI – Clean, mobile-friendly interface built with React.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Authentication Support – Integrates with backend for secure login and registration (JWT-based).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Cart Management – Add, update, and remove items before checkout.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Payment Integration – Connects with Stripe for real or test payments.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Real-Time Updates – Dynamic order tracking and status refresh.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Build Fails to Minify:
+Ensure all dependencies are compatible with your current React version.
