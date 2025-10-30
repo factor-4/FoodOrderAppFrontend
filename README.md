@@ -12,7 +12,7 @@ It demonstrates key frontend development skills, including component-based archi
 # Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-.
+
 Follow the steps below to set up and run it locally.
 
 npm start
