@@ -19,7 +19,7 @@ code {
 
 /** NAVBAR STYLING*/
 nav {
-    background-color: #9555e4;
+    background-color: #37b6c9;
     color: white;
     padding: 16px 24px;
     display: flex;
@@ -52,23 +52,62 @@ nav {
     align-items: center;
 }
 
-.nav-link {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 16px;
+/* Default text style */
+.nav-link,
+.logo-link,
+.nav-button {
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+  position: relative;
 }
 
-.nav-link:hover {
-    color: #ffcc80;
+/* Subtle underline animation */
+.nav-link::after,
+.logo-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: width 0.25s ease;
 }
 
-.nav-link span {
-  color: white;
-  background: red;
+/* Hover state — no background change */
+.nav-link:hover,
+.logo-link:hover,
+.nav-button:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* soft glow */
+  transform: scale(1.05);
+}
+
+/* Animate underline on hover */
+.nav-link:hover::after,
+.logo-link:hover::after {
+  width: 100%;
+}
+
+/* Cart badge */
+.cart-count-badge {
+  background-color: #ff4757;
+  color: #fff;
   border-radius: 50%;
-  padding: 2px 6px;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.75rem;
   margin-left: 4px;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Keep spacing clean */
+.nav-link {
+  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 
@@ -114,9 +153,7 @@ nav {
     transition: background-color 0.3s;
 }
 
-.nav-link:hover {
-    background-color: #f5f5f5;
-}
+
 
 .nav-button {
     display: flex;
@@ -598,6 +635,7 @@ nav {
 
 .login-form-food {
     margin-top: 1rem;
+    margin-right: 1rem;
 }
 
 .login-form-group {
@@ -3508,8 +3546,14 @@ nav {
     padding: 2rem;
 }
 
+.register-form-food {
+   
+    margin-right: 1.5rem;
+}
 .admin-form-group {
     margin-bottom: 1.5rem;
+   
+    
 }
 
 .admin-label {

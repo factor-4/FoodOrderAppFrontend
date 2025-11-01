@@ -3,7 +3,8 @@ import axios from "axios";
 export default class ApiService {
 
 
-    static BASE_URL = "http://localhost:8090/api";
+    //static BASE_URL = "http://localhost:8090/api";
+    static BASE_URL = "http://16.171.29.151:8090/api";
 
     static saveToken(token) {
         localStorage.setItem("token", token);
@@ -69,7 +70,7 @@ export default class ApiService {
 
 
 
-    
+
 
 
     // REGISTER USER
@@ -95,7 +96,8 @@ export default class ApiService {
 
 
 
-     /**USERS PROFILE MANAGEMENT SESSION */
+
+    /**USERS PROFILE MANAGEMENT SESSION */
     static async myProfile() {
         const resp = await axios.get(`${this.BASE_URL}/users/account`, {
             headers: this.getHeader()
