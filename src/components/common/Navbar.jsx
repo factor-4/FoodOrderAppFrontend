@@ -8,7 +8,7 @@ const Navbar = () => {
     const isCustomer = ApiService.isCustomer();
     const isDeliveryPerson = ApiService.isDeliveryPerson();
     const navigate = useNavigate();
-    
+
     // State to store cart item count
     const [cartCount, setCartCount] = useState(0);
 
@@ -20,7 +20,7 @@ const Navbar = () => {
                 if (response.statusCode === 200 && response.data) {
                     // Calculate total items in cart
                     const totalItems = response.data.cartItems.reduce(
-                        (total, item) => total + item.quantity, 
+                        (total, item) => total + item.quantity,
                         0
                     );
                     setCartCount(totalItems);
@@ -47,7 +47,7 @@ const Navbar = () => {
 
         // Add event listener for cart updates
         window.addEventListener('cartUpdated', handleCartUpdate);
-        
+
         // Cleanup event listener on component unmount
         return () => {
             window.removeEventListener('cartUpdated', handleCartUpdate);
@@ -67,25 +67,27 @@ const Navbar = () => {
         <nav>
             <div className="logo">
                 <Link to="/" className="logo-link">
-                    🍕 Food App
+                    The Ingredient
                 </Link>
             </div>
 
             <div className="desktop-nav">
                 {/* Always visible links */}
-                <Link to="/home" className="nav-link">🏠 Home</Link>
-                <Link to="/menu" className="nav-link">📋 Menu</Link>
-                <Link to="/categories" className="nav-link">📁 Categories</Link>
+
+                <Link to="/home" className="nav-link"> Home</Link>
+                <Link to="/menu" className="nav-link"> Menu</Link>
+                <Link to="/categories" className="nav-link"> Categories</Link>
+
 
                 {isAuthenticated ? (
                     <>
                         {/* Customer specific links */}
                         {isCustomer && (
                             <>
-                                <Link to="/orders" className="nav-link">📦 Orders</Link>
+                                <Link to="/orders" className="nav-link"> Orders</Link>
                                 {/* Cart link with badge showing item count */}
                                 <Link to="/cart" className="nav-link cart-link">
-                                    🛒 Cart
+                                    Cart
                                     {cartCount > 0 && (
                                         <span className="cart-count-badge">{cartCount}</span>
                                     )}
@@ -93,24 +95,24 @@ const Navbar = () => {
                             </>
                         )}
 
-                      
-                        
+
+
                         {/* Admin specific links */}
                         {isAdmin && (
-                            <Link to="/admin" className="nav-link">⚙️ Admin</Link>
+                            <Link to="/admin" className="nav-link"> Admin</Link>
                         )}
-                        
+
                         {/* Common authenticated user links */}
-                        <Link to="/profile" className="nav-link">👤 Profile</Link>
+                        <Link to="/profile" className="nav-link"> Profile</Link>
                         <button className="nav-button" onClick={handleLogout}>
-                            🔒 Logout
+                            Logout
                         </button>
                     </>
                 ) : (
                     <>
                         {/* Links for non-authenticated users */}
-                        <Link to="/login" className="nav-link">🔑 Login</Link>
-                        <Link to="/register" className="nav-link">📝 Register</Link>
+                        <Link to="/login" className="nav-link"> Login</Link>
+                        <Link to="/register" className="nav-link"> Register</Link>
                     </>
                 )}
             </div>
