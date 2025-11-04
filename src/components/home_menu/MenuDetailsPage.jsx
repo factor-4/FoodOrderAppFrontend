@@ -62,6 +62,7 @@ const MenuDetailsPage = () => {
 
             if (response.statusCode === 200) {
                 setCartSuccess(true);
+                window.dispatchEvent(new Event('cartUpdated'));
                 setTimeout(() => setCartSuccess(false), 4000); // Hide success message after 3 seconds
             } else {
                 showError(response.message);

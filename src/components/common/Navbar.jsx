@@ -84,7 +84,6 @@ const Navbar = () => {
                         {/* Customer specific links */}
                         {isCustomer && (
                             <>
-                                <Link to="/orders" className="nav-link"> Orders</Link>
                                 {/* Cart link with badge showing item count */}
                                 <Link to="/cart" className="nav-link cart-link">
                                     Cart
