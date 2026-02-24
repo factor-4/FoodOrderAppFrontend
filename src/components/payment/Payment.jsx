@@ -7,7 +7,7 @@ import { useError } from '../common/ErrorDisplay';
 
 
 // Load Stripe with your publishable key
-const stripeInstance = loadStripe('pk_test_51SJL8MI3UJArHNplbxC21zzW3aF2c0svVrnt88c2axkpb6qM7YC6C67t7iqIC0HZ12MswTdt5oe4SlWXaAgiPzvK00fGpIDsxb')
+const stripeInstance = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 
 const PaymentForm = ({ amount, orderId, onSuccess }) => {
